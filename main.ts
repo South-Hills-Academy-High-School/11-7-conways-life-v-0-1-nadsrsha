@@ -29,25 +29,11 @@ let gridSprite: Sprite = null
 let currentX = 0
 let gridSprites: Sprite[] = []
 let grid: number[][] = []
-let list = [
-0,
-1,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-0
-]
 let rowTemplate: number[] = []
-for (let index = 0; index < 12; index++) {
-    grid.push(rowTemplate)
+for (let row = 0; row <= 11; row++) {
+    grid.push([])
+    for (let collumn = 0; collumn <= 15; collumn++) {
+        grid[row].push(1)
+    }
 }
+drawGrid()
